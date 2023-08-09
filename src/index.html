@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Change this to your name-->
+    <meta name="author" content="Ka Ying, Chan" />
+
+    <title>WEB-FA: Rummikub Main</title>
+    <link rel="stylesheet" href="./css/Rmk_css.css" type="text/css" />
+
+    <!-- ADDING GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Knewave&family=Spinnaker&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Change this to your App's info -->
+      <div id="headerContainer">
+        <div id="homeButton"></div>
+        <div class="slogan">#Brings people together #fanspage</div>
+      </div>
+      <nav id="menu">
+        <!-- BUTTONS ARE CREATED -->
+      </nav>
+    </header>
+
+    <main>
+      <div id="contentDiv">
+        <div id="introDiv">
+          <h2>#IntroToRummikub</h2>
+          <img class="normalImage" src="https://assets.funnygames.org/6/114196/99940/1200x630/rummikub.webp" alt="vintageRum">
+          <p>
+            Rummikub is a tile-based game, combining elements of the card game
+            Rummy and mahjong. Every turn you can use your tiles or take a new
+            one from the tile pool to make either Groups or Runs. Groups are
+            formed by at least 3 tiles with the same number, but different
+            colors. Runs consist in at least 3 tiles of the same color and with
+            consecutive numbers. Unique for Rummikub is that players can work
+            with the tiles that have already been played.<br>
+            <img class="normalImage" src="https://s.eslite.dev/upload/product/o/2682078931004/20211001035741389708.jpg" alt="vintageRum">
+            <br /><br />The game consists of 106 tiles in four different colors
+            (black, red, blue, and yellow) and two jokers. Players start with a
+            hand of tiles and take turns drawing and discarding tiles in order
+            to form valid sets and runs. Players can manipulate existing melds
+            on the table, rearranging tiles to create new combinations. A key
+            rule is that players must always maintain a certain minimum value of
+            points in their initial meld, which adds an additional layer of
+            strategy to the game. The goal is to be the first to eliminate all
+            the tiles from their rack. The players must puzzle out their best
+            combinations and when more tiles are in play, the options becomes
+            challenging and complex.
+            <br><br>For now, Rummikub even have the mobile version and you can enjoy the game anytime, anywhere for free!
+            <br><br>Let's gather some friends and have fun!
+          </p>
+          <img class="normalImage" src="https://www.solitaireparadise.com/static/game-images/rummikub-800x403.png" alt="onlineVersion">
+        </div>
+        <hr />
+        <form
+          class="subscribe"
+          id="subscribe"
+          action="https://httpbin.org/post"
+          method="POST"
+        >
+          <h3>#SubcribeToNewsletter</h3>
+          <!-- <label for="name">Name:</label> -->
+          <input type="hidden" id="name" name="name" value="Ka Ying, Nicole Chan" class="subscribe" /> 
+          <br />
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" class="subscribe">
+          <br />
+          <div id="validateEmail"></div> <!-- Show error message above the "Join" Button -->
+          <button id="submitButton" class="basicButton" type="submit">
+            <img
+              class="submitCircle"
+              src="https://upload.wikimedia.org/wikipedia/commons/2/20/Rummikub_red_joker.svg"
+            />
+            <h5>Join</h5>
+          </button>
+
+        </form>
+      </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/info.js"></script>
+    <script src="./js/reviews.js"></script>
+  </body>
+</html>
