@@ -43,11 +43,42 @@ hr {
   border-width: 2px;
   width: 100%;
 }
+h1,h2,h3,h4,h5,h6{
+  font-family: "Knewave", cursive;
+  text-align: left;
+}
+p {
+  text-align: justify;
+  margin-top: 0px;
+  margin-bottom: 0.2rem;
+  font-family: "Spinnaker", sans-serif;
+}
+a {
+  text-decoration: none;
+  /* color: #ff7d71; */
+}
+ul {
+  list-style-type: square;
+}
+/* SCROLLING BAR */
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: #ffffff6d; /* Background color of the track */
+}
+::-webkit-scrollbar-thumb {
+  background: #ff000038; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
 
 
+
+
+/*** INDEX: HEADER ***/
 .headerContainer {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
 }
@@ -60,10 +91,9 @@ hr {
   font-size: 20px;
   color: #000000;
 }
-/* HOME BUTTONS */
+/* THE RUMMIKUB HOME BUTTON */
 .home-button {
   cursor: pointer;
-
   margin-top: 20px;
   margin-bottom: 0rem;
   background-color: #ffffff00;
@@ -90,7 +120,7 @@ hr {
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 6);
 }
 
-/* NAVIGATION BAR */
+/*** INDEX: NAVIGATION BAR ***/
 nav#menu {
   display: flex;
   align-items: center;
@@ -116,31 +146,25 @@ nav#menu:hover {
   cursor: default; /* Change the cursor to a pointer on hover */
 }
 .navButton {
-  /*button*/
   cursor: pointer;
 
   margin-top: 0px;
   margin-bottom: 0rem;
 
-  /*Transparent*/
-  background-color: #ffffff00;
-  border: 0px solid #ffffff00;
+  background-color: #ffffff00;    /*Transparent*/
+  border: 0px solid #ffffff00;    /*Transparent*/
 
   text-align: center;
   font-family: "Knewave", cursive;
-  /* font-family: "Spinnaker", sans-serif; */
   font-size: 24px;
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .navButton[enabled] {
-  /*button[enabled]*/
   cursor: default;
   opacity: 0.5;
 }
 .navButton:hover:enabled {
-  /*button:focus:enabled,
-  button:hover:enabled */
   background: linear-gradient(to right, #ff0000, rgb(0, 26, 255));
   background-clip: text;
   -webkit-background-clip: text; /* For Safari/WebKit browsers */
@@ -158,48 +182,7 @@ nav#menu:hover {
   text-decoration-thickness: 5px;
 }
 
-
-
-.commentsForm{
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 500px;
-  height: fit-content;
-  margin: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 20px;
-  border: 0px solid #ccc;
-  border-radius: 10px;
-  background-color: #f5f5f5;
-  box-shadow: 2px 2px 10px rgba(200, 200, 200, 10);
-}
-.commentsForm label {
-  margin-bottom: 6px;
-  font-family: "Spinnaker", sans-serif;
-  font-size: 16px;
-  text-align: left;
-}
-.commentsForm input {
-  width: 10em;
-  height: 26px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-}
-.commentsForm textarea {
-  border: 1px solid #ccc;
-  width: 100%;
-  border-radius: 10px;
-}
-.commentsForm input::placeholder,
-.commentsForm textarea::placeholder {
-  padding-left: 0.5em;
-  font-family: "Spinnaker", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
+/*** INDEX: SUBSCRIBE ***/
 .subscribe{
   display: flex;
   flex-direction: column;
@@ -244,6 +227,115 @@ nav#menu:hover {
   font-size: 14px;
   color: #20763e;
 }
+
+
+/*** REVIEWS: DISPLAYING CARDS FOR ALL COMMENTS ***/
+.cardContainer {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  column-gap: 40px; /* gap between each cards */
+  row-gap: 30px; /* gap between each cards */
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  justify-content: space-around;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 0 0px 0px 0 #baadbc33;
+  background-color: #ffffff5e;
+  transition: 0.2s;
+  border-radius: 10px; /* 5px rounded corners */
+  align-items: center; /* aligning img and textContainer */
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: auto;
+  min-height: 160px;
+}
+.card:hover {
+  /* On mouse-over, add a very-very deeper shadow (at most px*4 times) */
+  box-shadow: 6px 6px rgb(253, 80, 80);
+  cursor: pointer;
+}
+.iconCircle {
+  width: 100px; 
+  height: 100px; 
+  margin-left: 20px;
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+.iconCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the circular shape */
+}
+.textContainer {
+  margin-top: 0.6em;
+  margin-left: 30px;
+  margin-right: 20px;
+  width: 400px;
+  font-family: "Spinnaker";
+}
+.textContainer_name{
+  font-weight: bold;
+}
+.textContainer_date{
+  font-size: 12px;
+  color: #656565;
+}
+.textContainer_content{
+font-size: 14px;
+}
+.headerh2{
+  margin-left: 6em;
+}
+
+
+/*** REVIEWS: COMMENTS FORMS ***/
+.commentsForm{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 500px;
+  height: fit-content;
+  margin: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 10px rgba(200, 200, 200, 10);
+}
+.commentsForm label {
+  margin-bottom: 6px;
+  font-family: "Spinnaker", sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+.commentsForm input {
+  width: 10em;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.commentsForm textarea {
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 10px;
+}
+.commentsForm input::placeholder,
+.commentsForm textarea::placeholder {
+  padding-left: 0.5em;
+  font-family: "Spinnaker", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/*** BUTTONS FOR FORMS: SUBSCRIBE AND JOIN ***/
 .basicButton {
   display: flex;
   justify-content: center; 
@@ -274,6 +366,8 @@ nav#menu:hover {
   outline: 1;
 }
 
+
+/* ALL DIV SIZE SETTINGS */
 .contentDiv {
   background: linear-gradient(to right, #00000000, rgba(255, 255, 255, 0));
   box-shadow: 3px 3px 0px 3px rgb(255, 0, 0);
@@ -320,29 +414,7 @@ nav#menu:hover {
   border-radius: 20px;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: "Knewave", cursive;
-  text-align: left;
-}
-p {
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 0.2rem;
-  font-family: "Spinnaker", sans-serif;
-}
-.disclaimer{
-  font-size: 12px;
-  text-align: justify;
-}
-a {
-  text-decoration: none;
-  /* color: #ff7d71; */
-}
-ul {
-  list-style-type: square;
-}
-
-
+/*** ALL RUMMIKUB IMAGES ***/
 .normalImage{
   border-radius: 20px;
   margin-top: 16px;
@@ -351,70 +423,7 @@ ul {
   height: auto;
 }
 
-/* REVIEWS */
-
-.cardContainer {
-  width: 900px;
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-around; */
-  column-gap: 40px; /* gap between each cards */
-  row-gap: 30px; /* gap between each cards */
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  justify-content: space-around;
-}
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 0 0px 0px 0 #baadbc33;
-  background-color: #ffffff5e;
-  transition: 0.2s;
-  border-radius: 10px; /* 5px rounded corners */
-  align-items: center; /* aligning img and textContainer */
-  display: flex;
-  flex-direction: row;
-  width: 600px;
-  height: auto;
-  min-height: 160px;
-}
-.card:hover {
-  /* On mouse-over, add a very-very deeper shadow (at most very*4 times) */
-  box-shadow: 6px 6px rgb(253, 80, 80);
-  cursor: pointer;
-}
-.iconCircle {
-  width: 100px; 
-  height: 100px; 
-  margin-left: 20px;
-  border-radius: 50%; 
-  overflow: hidden; 
-}
-.iconCircle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the circular shape */
-}
-.textContainer {
-  margin-top: 0.6em;
-  margin-left: 30px;
-  margin-right: 20px;
-  width: 400px;
-  font-family: "Spinnaker";
-}
-.textContainer_name{
-  font-weight: bold;
-}
-.textContainer_date{
-  font-size: 12px;
-  color: #656565;
-}
-.textContainer_content{
-font-size: 14px;
-}
-
-
-/* ABOUT */
+/*** ABOUT ***/
 .proPicCircle {
   width: 300px; 
   height: 300px; 
@@ -443,16 +452,8 @@ font-size: 14px;
   height: 80%;
   object-fit: cover;
 }
+.disclaimer{
+  font-size: 14px;
+  text-align: justify;
+}
 
-/* SCROLLING BAR */
-/* Webkit-based browsers (Chrome, Safari) */
-::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
-}
-::-webkit-scrollbar-track {
-  background: #ffffff6d; /* Background color of the track */
-}
-::-webkit-scrollbar-thumb {
-  background: #ff000038; /* Color of the scrollbar thumb */
-  border-radius: 6px; /* Rounded corners of the thumb */
-}
