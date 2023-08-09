@@ -1,5 +1,5 @@
 /*
- * WEB222 – Assignment Final
+ * WEB222 – Assessment Final
  *
  * I declare that this assignment is my own work in accordance with Seneca Academic Policy.
  * No part of this assignment has been copied manually or electronically from any other source
@@ -7,7 +7,7 @@
  *
  *      Name:       KA YING, CHAN
  *      Student ID: 123231227
- *      Date:       8 AUG 2023
+ *      Date:       9 AUG 2023
  */
 
 

@@ -1,7 +1,16 @@
-/*ALL CSS IN THIS FILE CREATED BY KA YING, CHAN*/
-
+/*
+ * WEB222 – Assessment Final
+ * CSS FOR RUMMIKUB
+ *
+ * I declare that this assignment is my own work in accordance with Seneca Academic Policy.
+ * No part of this assignment has been copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ *      Name:       KA YING, CHAN
+ *      Student ID: 123231227
+ *      Date:       9 AUG 2023
+*/
 body {
-  /* font-size: 1.8rem; */
   max-width: 30em;
   color: #000000;
   display: flex;
@@ -31,7 +40,7 @@ hr {
   border-color: rgb(255, 0, 0);
   border-radius: 6px;
   border-style:dashed;
-  border-width: 2px; /* Border width */
+  border-width: 2px;
   width: 100%;
 }
 
@@ -44,8 +53,6 @@ hr {
 }
 .slogan {
   text-align: center;
-  /* justify-content: center;
-  align-items: center; */
   display: flex;
   margin-top: 0rem;
   margin-bottom: 2rem;
@@ -150,12 +157,57 @@ nav#menu:hover {
   text-decoration: line-through;
   text-decoration-thickness: 5px;
 }
+
+
+
+.commentsForm{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 500px;
+  height: fit-content;
+  margin: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 10px rgba(200, 200, 200, 10);
+}
+.commentsForm label {
+  margin-bottom: 6px;
+  font-family: "Spinnaker", sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+.commentsForm input {
+  width: 10em;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.commentsForm textarea {
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 10px;
+}
+.commentsForm input::placeholder,
+.commentsForm textarea::placeholder {
+  padding-left: 0.5em;
+  font-family: "Spinnaker", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .subscribe{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
   padding: 10px;
   border: 0px solid #ccc;
   border-radius: 10px;
@@ -211,7 +263,6 @@ nav#menu:hover {
   cursor: pointer;
 }
 .basicButton[enabled] {
-  /*button[enabled]*/
   cursor: default;
   opacity: 0.5;
 }
@@ -229,7 +280,6 @@ nav#menu:hover {
   border-radius: 20px;
   width: auto;
   height: auto;
-  /* position: relative; */
 }
 .info-iframe {
   margin-top: 10px;

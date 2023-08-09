@@ -18,8 +18,31 @@
   </head>
   <body>
     <div id="reviewsDiv">
-    <!-- ReviewsCards are dynamically allocated; -->
+      <!-- ReviewsCards are dynamically allocated; -->
     </div>
+
+<hr>
+  <form id="commentsForm" class="commentsForm">
+    <h3>#leaveSomeComments:</h3>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="e.g. iamGroot" required><br>
+    
+    <input type="hidden" id="date" name="date" readonly>
+    
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="What do you think about Rummikub?" required></textarea><br>
+    
+    <label for="ratings">Ratings:</label>
+    <input type="number" id="ratings" name="ratings" min="1" max="5" placeholder="Min: 1, Max: 5"><br>
+    
+    <button id="submitButton" class="basicButton" type="submit">
+      <img
+        class="submitCircle"
+        src="https://upload.wikimedia.org/wikipedia/commons/2/20/Rummikub_red_joker.svg"
+      />
+      <h5>Summit</h5>
+    </button>
+</form>
 
     <script src="./js/info.js"></script>
     <script src="./js/reviews.js"></script>
