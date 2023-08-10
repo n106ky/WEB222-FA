@@ -110,7 +110,6 @@ function displayReviews() {
 }
 // displayReviews();
 
-
 function addReview() {
   var form = document.getElementById("commentsForm");
   form.addEventListener("submit", (e) => {
