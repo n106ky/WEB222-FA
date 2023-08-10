@@ -1,5 +1,6 @@
 /*
  * WEB222 – Assessment Final
+ * index.js
  *
  * I declare that this assignment is my own work in accordance with Seneca Academic Policy.
  * No part of this assignment has been copied manually or electronically from any other source
@@ -8,7 +9,7 @@
  *      Name:       KA YING, CHAN
  *      Student ID: 123231227
  *      Date:       9 AUG 2023
- */
+*/
 
 
 /***************** GETTING CONTENTS *****************/
@@ -104,24 +105,22 @@ function navBar() {
 /***************** VALIDATE FOR EMAIL *****************/
 
 const getButton = document.getElementById("submitButton");
-getButton.addEventListener("click", (e)=>{
+getButton.addEventListener("click", (e) => {
   const email = document.getElementById("email");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  e.preventDefault();
   if (!emailRegex.test(email.value)) {
-    e.preventDefault(); // Prevent sending it to the serve if email not correct
     const err = document.getElementById("validateEmail");
     err.classList.add("errEmail");
     err.innerHTML = "Sorry! Invalid email format detected.";
     return false;
-  }
-else{
-  const valid = document.getElementById("validateEmail");
-  valid.classList.add("validEmail");
-  valid.innerHTML = "Thank you! Sending information...";
-  return true;
-}
-
-})
+  } else {
+    const valid = document.getElementById("validateEmail");
+    valid.classList.add("validEmail");
+    valid.innerHTML = `Information has been sent to the server!`;
+    return true;
+  }
+});
 
 
 
