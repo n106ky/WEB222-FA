@@ -1,4 +1,4 @@
-# WEB222-FA
+# Rummikub Fans Page
 Fans page of Rummikub https://web222-fa-rummikub-kchan151.netlify.app/
 
 <i>This is not a phishing site.</i><br>
